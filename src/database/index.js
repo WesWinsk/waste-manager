@@ -1,8 +1,10 @@
 const Sequelize = require( 'sequelize');
 const databaseConfig = require( '../config/database');
-const User = require('../app/models/User')  //importa o model de usuário
+const User = require('../app/models/User');  //importa o model de usuário
+const Materials = require('../app/models/Materials');
+const Discard = require('../app/models/Discard');
 
-const models = [User];
+const models = [User, Materials, Discard ];
 // classe que inicia a conexão de cada tabela com o banco de dados
 class Database {
     constructor() {
