@@ -3,8 +3,11 @@ const databaseConfig = require( '../config/database');
 const User = require('../app/models/User');  //importa o model de usuário
 const Materials = require('../app/models/Materials');
 const Discard = require('../app/models/Discard');
+const Search = require('../app/models/Search');
+const Notification = require('../app/models/Notification');
+const Purchase = require('../app/models/Purchase')
 
-const models = [User, Materials, Discard ];
+const models = [User, Materials, Discard, Search, Notification, Purchase ];
 // classe que inicia a conexão de cada tabela com o banco de dados
 class Database {
     constructor() {
