@@ -3,7 +3,7 @@ const Search = require ('../models/Search');
 class SearchController {
     async store ( req , res ){
 
-        const { user_id, material_id, quantity  } = req.body;
+        const { user_id, material_id, quantity, was_find  } = req.body;
 
         const search = await Search.create(req.body);
         

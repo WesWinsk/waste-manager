@@ -3,7 +3,7 @@ const Discard = require ('../models/Discard');
 class DiscardController {
     async store ( req , res ){
 
-        const { user_id, material_id,max_cap, curr_quant } = req.body;
+        const { user_id, material_id,max_cap, curr_quant,description , type_id } = req.body;
 
         const discard = await Discard.create(req.body);
 

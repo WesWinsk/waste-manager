@@ -6,8 +6,9 @@ const Discard = require('../app/models/Discard');
 const Search = require('../app/models/Search');
 const Notification = require('../app/models/Notification');
 const Purchase = require('../app/models/Purchase')
+const Types = require ('../app/models/Types');
 
-const models = [User, Materials, Discard, Search, Notification, Purchase ];
+const models = [User, Materials, Discard, Search, Notification, Purchase, Types ];
 // classe que inicia a conexão de cada tabela com o banco de dados
 class Database {
     constructor() {
