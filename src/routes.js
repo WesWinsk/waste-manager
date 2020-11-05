@@ -12,6 +12,8 @@ const MaterialUserController = require('./app/controllers/MaterialSearchControll
 const DiscardInfoController = require('./app/controllers/DiscardInfoController');
 const LoginController = require('./app/controllers/LoginController');
 const MatchBySearchController = require('./app/controllers/MatchBySearchController');
+const UserByIdController = require('./app/controllers/UserByIdController');
+const UserNotificationController = require('./app/controllers/UserNotificationController');
 
 const routes = express.Router();
 
@@ -47,6 +49,10 @@ routes.get('/discards/info/:id', DiscardInfoController.index);
 routes.post('/userslogin', LoginController.index);
 
 routes.post('/discardsmatch', MatchBySearchController.index);
+
+routes.get('/users/:id', UserByIdController.index);
+
+routes.get('/notifications/:user_id', UserNotificationController.index);
 
 
 module.exports = routes;
