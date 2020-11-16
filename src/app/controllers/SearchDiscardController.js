@@ -2,6 +2,7 @@ const Discard = require ('../models/Discard');
 const User = require ('../models/User');
 const Material = require ('../models/Materials');
 
+
 //TEM QUE EDITAR
 
 class SearchDiscardController {

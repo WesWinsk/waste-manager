@@ -6,6 +6,7 @@ class Notification extends Sequelize.Model{
             {
                 accepted: Sequelize.BOOLEAN,
                 message: Sequelize.STRING,
+                provider_accepted: Sequelize.BOOLEAN,
                 
             },
             {
@@ -17,6 +18,8 @@ class Notification extends Sequelize.Model{
     static associate(models){
         this.belongsTo(models.User, { foreignKey: 'user_id'});
         this.belongsTo(models.Search, { foreignKey: 'search_id'});
+        this.belongsTo(models.Discard, {foreignKey: 'discard_id'});
+        this.belongsTo(models.User, { foreignKey: 'provider_id', as: 'provider'});
     }
 }
 

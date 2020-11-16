@@ -1,6 +1,6 @@
 const Discard = require ('../models/Discard');
 const Material = require ('../models/Materials');
-
+const Type = require ('../models/Types');
 
 class DiscardInfoController {
 
@@ -12,7 +12,7 @@ class DiscardInfoController {
                 where: {
                 id 
             }, 
-            include: Material
+            include: [Material, Type]
         
         
         }

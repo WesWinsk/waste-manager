@@ -1,18 +1,18 @@
 const Search = require ('../models/Search');
 const Material = require ('../models/Materials');
-const Type = require('../models/Types');
+const Type = require ('../models/Types');
 
-
-class MaterialSearchController {
+class SearchesInfoController {
 
     async index (req, res){
 
-        const {user_id} = req.params;
+        const {id} = req.params;
 
         const search = await Search.findAll({
                 where: {
-                user_id 
-            }, include: [Material, Type]
+                id 
+            }, 
+            include: [Material, Type]
         
         
         }
@@ -22,4 +22,4 @@ class MaterialSearchController {
     }
 }
 
-module.exports = new MaterialSearchController();
+module.exports = new SearchesInfoController();

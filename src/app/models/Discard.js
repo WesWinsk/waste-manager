@@ -7,6 +7,7 @@ class Discard extends Sequelize.Model{
                 max_cap: Sequelize.DECIMAL(10,2),
                 curr_quant: Sequelize.DECIMAL(10,2),
                 description: Sequelize.TEXT,
+                price: Sequelize.DECIMAL(10,2),
 
             },
             {

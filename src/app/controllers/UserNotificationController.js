@@ -3,7 +3,7 @@ const Notification = require ('../models/Notification');
 const Search = require ('../models/Search');
 const User = require ('../models/User');
 const Material = require ('../models/Materials');
-
+const Type = require('../models/Types');
 
 //TEM QUE EDITAR
 
@@ -20,7 +20,7 @@ class UserNotificationController{
                 model: Search,
                 as: 'Search',
                 include: 
-                [User, Material]
+                [User, Material, Type]
             }
             }     
         )

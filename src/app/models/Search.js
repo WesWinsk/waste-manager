@@ -18,6 +18,7 @@ class Search extends Sequelize.Model{
         this.belongsTo(models.User, { foreignKey: 'user_id'});
         this.belongsTo(models.Materials, { foreignKey: 'material_id'});
         this.belongsTo(models.Types, {foreignKey: 'Type_id'});
+
     }
 }
 
